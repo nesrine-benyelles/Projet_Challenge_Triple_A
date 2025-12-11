@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>System Monitor Report</title>
+    <link rel="stylesheet" href="template.css">
+</head>
+
+<body>
+
+<header>
+    <h1>System Monitoring Report</h1>
+    <p>Generated on : {{ generation_time }}</p>
+</header>
+
+<main>
+
+    <!-- SECTION SYSTEM -->
+    <section>
+        <h2>System Information</h2>
+        <p><strong>Machine name :</strong> {{ machine_name }}</p>
+        <p><strong>Operating System :</strong> {{ os_name }}</p>
+        <p><strong>Uptime :</strong> {{ uptime }}</p>
+        <p><strong>Connected Users :</strong> {{ user_count }}</p>
+        <p><strong>Main IP Address :</strong> {{ main_ip }}</p>
+    </section>
+
+    <!-- SECTION CPU -->
+    <section>
+        <h2>CPU Information</h2>
+        <p><strong>Logical Cores :</strong> {{ cpu_cores }}</p>
+        <p><strong>Current Frequency :</strong> {{ cpu_frequency }} MHz</p>
+        <p><strong>CPU Usage :</strong> {{ cpu_usage }}%</p>
+    </section>
+
+    <!-- SECTION MEMORY -->
+    <section>
+        <h2>Memory Usage</h2>
+        <p><strong>Total RAM :</strong> {{ ram_total }} GB</p>
+        <p><strong>Used RAM :</strong> {{ ram_used }} GB</p>
+        <p><strong>RAM Usage :</strong> {{ ram_percent }}%</p>
+
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: {{ ram_percent }}%;"></div>
+        </div>
+    </section>
+
+    <!-- SECTION PROCESSES -->
+    <section>
+        <h2>Top 3 Processes</h2>
+        <ul>
+            {{ top_processes }}
+        </ul>
+    </section>
+
+    <!-- SECTION FILES -->
+    <section>
+        <h2>File Analysis</h2>
+        <p><strong>Total files scanned :</strong> {{ total_files }}</p>
+        <ul>
+            <li>.txt : {{ txt_count }} files ({{ txt_percent }}%)</li>
+            <li>.py : {{ py_count }} files ({{ py_percent }}%)</li>
+            <li>.pdf : {{ pdf_count }} files ({{ pdf_percent }}%)</li>
+            <li>.jpg : {{ jpg_count }} files ({{ jpg_percent }}%)</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>Report generated automatically by monitor.py</p>
+</footer>
+
+</body>
+</html>
