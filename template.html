@@ -51,17 +51,17 @@
         <ul>
             {{ top_processes }}
         </ul>
+
     </section>
 
     <!-- SECTION FILES -->
     <section>
         <h2>File Analysis</h2>
-        <p><strong>Total files scanned :</strong> {{ total_files }}</p>
         <ul>
-            <li>.txt : {{ txt_count }} files ({{ txt_percent }}%)</li>
-            <li>.py : {{ py_count }} files ({{ py_percent }}%)</li>
-            <li>.pdf : {{ pdf_count }} files ({{ pdf_percent }}%)</li>
-            <li>.jpg : {{ jpg_count }} files ({{ jpg_percent }}%)</li>
+            <li>.txt : {{ txt_count }} files ({{ txt_percentage }}%)</li>
+            <li>.py : {{ py_count }} files ({{ py_percentage }}%)</li>
+            <li>.pdf : {{ pdf_count }} files ({{ pdf_percentage }}%)</li>
+            <li>.jpg : {{ jpg_count }} files ({{ jpg_percentage }}%)</li>
         </ul>
     </section>
 
