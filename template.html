@@ -9,8 +9,8 @@
 <body>
 
 <header>
-    <h1>System Monitoring Report</h1>
-    <p>Generated on : {{ generation_time }}</p>
+    <h1>Rapport de surveillance du système</h1>
+    <p>Générer le : {{ generation_time }}</p>
 </header>
 
 <main>
@@ -18,6 +18,7 @@
     <!-- SECTION SYSTEM -->
     <section>
         <h2>Informations système générales</h2>
+        <hr>
         <ul>
             <li><strong>Nom de la machine :</strong> {{ machine_name }}</li>
             <li><strong>Système d'exploitation (distribution et version) :</strong> {{ os_name }}</li>
@@ -29,7 +30,8 @@
 
     <!-- SECTION CPU -->
     <section>
-        <h2>Informations sur le processseur </h2>
+        <h2>Informations sur le processeur </h2>
+        <hr>
         <ul>
             <li><strong>Nombre de coeurs du processeur :</strong> {{ cpu_cores }}</li>
             <li><strong>Fréquence actuelle du CPU :</strong> {{ cpu_frequency }} MHz</li>
@@ -39,9 +41,10 @@
 
     <!-- SECTION MEMORY -->
     <section>
-        <h2>Memory Usage</h2>
+        <h2>Utilisation de la mémoire</h2>
+        <hr>
         <ul>
-            <li><strong>RAM totale (en GB)</strong> {{ ram_total }} GB</li>
+            <li><strong>RAM totale (en GB) :</strong> {{ ram_total }} GB</li>
             <li><strong>RAM utilisée (en GB) :</strong> {{ ram_used }} GB</li>
             <li><strong>Pourcentage d'utilisation de la RAM :</strong> {{ ram_percent }}%</li>
         </ul>
@@ -52,7 +55,8 @@
 
     <!-- SECTION PROCESSES -->
     <section>
-        <h2>Top 3 Processes</h2>
+        <h2>Top 3 des processus</h2>
+        <hr>
         <ul>
             {{ top_processes }}
         </ul>
@@ -61,19 +65,20 @@
 
     <!-- SECTION FILES -->
     <section>
-        <h2>File Analysis</h2>
+        <h2>Analyse des fichiers</h2>
+        <hr>
         <ul>
-            <li><strong>.txt :</strong> {{ txt_count }} files ({{ txt_percentage }}%)</li>
-            <li><strong>.py :</strong> {{ py_count }} files ({{ py_percentage }}%)</li>
-            <li><strong>.pdf :</strong> {{ pdf_count }} files ({{ pdf_percentage }}%)</li>
-            <li><strong>.jpg :</strong> {{ jpg_count }} files ({{ jpg_percentage }}%)</li>
+            <li><strong>.txt :</strong> {{ txt_count }} fichiers ({{ txt_percentage }}%)</li>
+            <li><strong>.py :</strong> {{ py_count }} fichiers ({{ py_percentage }}%)</li>
+            <li><strong>.pdf :</strong> {{ pdf_count }} fichiers ({{ pdf_percentage }}%)</li>
+            <li><strong>.jpg :</strong> {{ jpg_count }} fichiers ({{ jpg_percentage }}%)</li>
         </ul>
     </section>
 
 </main>
 
 <footer>
-    <p>Report generated automatically by monitor.py</p>
+    <p>Rapport généré automatiquement par monitor.py</p>
 </footer>
 
 </body>
