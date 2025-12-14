@@ -84,7 +84,7 @@ for root, _, files in os.walk(path):
             if file.endswith(ext):
                 file_counts[ext] += 1
 
-    # Calcul des pourcentagess
+    # Calcul des pourcentages
     total_files = sum(file_counts.values())
     file_percentages = {
         ext: (count / total_files) * 100 if total_files > 0 else 0 for ext, count in file_counts.items()
